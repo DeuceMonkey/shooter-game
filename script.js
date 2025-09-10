@@ -90,11 +90,14 @@ function update() {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw player
-  if (player.alive) {
-    ctx.fillStyle = "lime";
-    ctx.fillRect(player.x - player.size/2, player.y - player.size/2, player.size, player.size);
-  }
+// Draw player
+if (player.alive) {
+  ctx.fillStyle = "lime";
+  ctx.fillRect(player.x - 15, player.y - 15, 30, 30); // larger square
+}
+
+console.log("Game loop running");
+
 
   // Draw enemies
   enemies.forEach((e) => {
@@ -143,3 +146,4 @@ function drawMinimap() {
 }
 
 // =====
+
