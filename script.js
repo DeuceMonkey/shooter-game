@@ -96,7 +96,11 @@ if (player.alive) {
   ctx.fillRect(player.x - 15, player.y - 15, 30, 30); // larger square
 }
 
-console.log("Game loop running");
+ctx.fillStyle = "white";
+ctx.font = "20px Arial";
+ctx.fillText("Player health: " + Math.round(player.health), 20, 70);
+ctx.fillText("Player X:" + player.x + " Y:" + player.y, 20, 100);
+
 
 
   // Draw enemies
@@ -146,4 +150,5 @@ function drawMinimap() {
 }
 
 // =====
+
 
